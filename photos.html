@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" href="photos.css">
+    <script src="https://kit.fontawesome.com/0601acd3ab.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo-removebg-preview.png">
+  </head>
+<body>
+
+    <div id="body1">
+      <div id="music-toggle" class="music-icon">      
+        <i class="fa-solid fa-volume-high fa-spin-pulse"></i>
+      </div>
+        <div class="container">
+             <header class="header">
+               <div class="logo">
+                <img id="mylogo" src="logo-removebg-preview.png" alt="mylogo">
+              </div>
+               <navbar class="navbar">
+               <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="result.html">Result</a></li>
+               </ul>
+             </navbar>
+             </header>
+            </div>
+
+            <div class="wrapper">
+                <div class="gallery">
+                  <div class="image"><span><img src="photo (1).jpg" alt=""></span></div>
+                  <div class="image"><span><img src="photo (2).jpg" alt=""></span></div>
+                  <div class="image"><span><img src="photo (3).jpg" alt=""></span></div>
+                  <div class="image"><span><img src="photo (4).jpg" alt=""></span></div>
+                  <div class="image"><span><img src="photo (5).jpg" alt=""></span></div>
+                  <div class="image"><span><img src="photo (6).jpg" alt=""></span></div>
+                  <div class="image"><span><img src="photo (7).jpg" alt=""></span></div>
+                  <div class="image"><span><img src="photo (8).jpg" alt=""></span></div>
+                  <div class="image"><span><img src="photo (9).jpg" alt=""></span></div>
+                </div>
+              </div>
+              <div class="preview-box">
+                <div class="details">
+                  <span class="title">Image <p class="current-img"></p> of <p class="total-img"></p></span>
+                  <span class="icon fas fa-times"></span>
+                </div>
+                <div class="image-box">
+                  <div class="slide prev"><i class="fas fa-angle-left"></i></div>
+                  <div class="slide next"><i class="fas fa-angle-right"></i></div>
+                  <img src="" alt="">
+                </div>
+              </div>
+              <div class="shadow"></div>
+            
+            
+              <script src="photos.js"></script>
+            
+              <!--for music-->
+              <audio autoplay loop volume="0.5">
+                <source src="Space Walk.mp4" type="audio/mpeg">
+              </audio>
+            </div>
+
+            <audio id="background-music" autoplay loop>
+              <source src="Space Walk.mp4" type="audio/mpeg">
+          </audio> 
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+}
+
+body{
+    background-image: url(/3968053.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.vid{
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.137);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    left: 10%;
+    position: absolute;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+}

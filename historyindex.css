@@ -1,0 +1,380 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    font-family: "Comic Neue", cursive;
+    text-decoration: none;
+}
+
+#music-toggle{
+    z-index: 3000;
+}
+
+.music-muted img {
+    filter: grayscale(100%);
+  }
+.music-icon{
+    cursor: pointer;
+    height: 25px;
+    position: fixed;
+    color: white;
+    margin-left: 20px;
+    z-index: 5003;
+    left: 0;
+    margin-top: 12%;
+}
+
+#mylogo{
+    height: 70px;
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width for vertical scrollbar */
+    height: 12px; /* Adjust the height for horizontal scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+   
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovered */
+}
+
+/* Scrollbar corner (if needed) */
+::-webkit-scrollbar-corner {
+    background: #f1f1f1; /* Background of the corner */
+}
+
+
+
+#body1{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300vh;
+    max-height: 300vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(kenbg20.jpg);
+    background-position: center;
+
+}
+
+
+.bubble-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    z-index: 0;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+    z-index: -1;
+}
+
+.bubbles span{
+    border-radius: 50%;
+    position: relative;
+    background: rgba(255, 205, 113, 0.4);;
+    margin: 0 4px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 0 10px rgba(255, 205, 113, 0.4),
+    0 0 50px #dcd74f,
+    0 0 100px #f2ff3b; 
+    animation: animate 5s linear infinite;
+    animation-delay: calc(-100s * var(--i)); /* Spread*/
+    animation-duration: calc(280s/ var(--i));
+
+}
+
+.bubbles span:nth-child(even){
+    background: rgba(255, 205, 113, 0.4);
+    box-shadow: 0 0 0 10px #c2950044,
+    0 0 50px #e2b00c9d,
+    0 0 100px #cb931b#c2950044;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(200vh) scale(0); 
+    }
+    100% {
+        transform: translateY(-100vh) scale(1); 
+    }
+ } 
+
+.header{
+    background-color: rgba(0, 0, 0, 0.425);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 6%;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.804);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    z-index: 1000;
+}
+
+.logo{
+    color: #f0f0f0;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.navbar ul{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li{
+    margin-left: 2rem;
+}
+
+.navbar ul li a{
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 20px;
+    font-weight: 1000;
+    position: relative;
+    display: inline-block;
+    transition: color 0.4s ease; /* Smooth color transition */
+}
+
+.navbar ul li a:hover{
+    color: rgb(255, 205, 113);
+}
+
+/*for navbar underline animation*/
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position the underline */
+    left: 50%; /* Start from the middle */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: rgb(255, 205, 113); /* Color of the underline */
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth animation */
+}
+
+.navbar ul li a:hover::after {
+    width: 100%; /* Full width underline on hover */
+    left: 0; /* Start from the left */
+}
+/*for navbar fill animation*/
+
+/**/
+.bento-container{
+    gap: 1em;
+    width: 1000px; 
+    height: 250vh;
+    display: flex;
+}
+
+.col-left{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 1em;
+    border-radius: 2em;
+
+}
+
+.row1{
+    flex: 1;
+    background-color: #222;
+    border-radius: 2em;
+}
+
+
+.row2{
+    flex: 3;
+    background-color: #222;
+    border-radius: 2em;
+}
+
+
+.row3{
+    flex: 2;
+    border-radius: 2em;
+    background-color: #222;
+
+}
+.row4{
+    flex: 3;
+    border-radius: 2em;
+    background-color: #222;
+
+}
+
+
+/*colunm right*/
+.col-right{
+    flex: 1;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    border-radius: 2em;
+    flex: 1;
+    background-color: #222;
+
+}
+    
+
+.bottom{
+    background-color: #222;
+    border-radius: 2em;
+    flex: 2;
+}
+
+/*contents of column and row*/
+.colh1{
+   padding: 20px;  
+   color: #f0f0f0;
+} 
+
+.colp{
+    padding: 20px;
+    color: #f0f0f0;
+    font-size: 1.5rem;
+}
+
+.rowh1{
+    color: #f0f0f0;
+    padding-left: 60px;
+    padding-top: 30px;
+    
+}
+
+.rowul{
+    color: #f0f0f0;
+    padding-left: 30px;
+    padding-top: 20px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.rowli{
+    color: #f0f0f0;
+    padding: 30px;
+    font-size: 2rem;
+}
+
+#history{
+    color: #f0f0f0;
+    font-size: 6rem;
+    text-align: center;
+    padding: 30px;
+}
+
+/*hover effect*/
+.bento-container .row1, .bento-container .row2, .bento-container .row3, 
+.bento-container .row4, .bento-container .row5, 
+.bento-container .top, .bento-container .bottom {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for box-shadow and transform */
+}
+
+.bento-container .row1:hover, .bento-container .row2:hover, .bento-container .row3:hover, 
+.bento-container .row4:hover, .bento-container .row5:hover, 
+.bento-container .top:hover, .bento-container .bottom:hover {
+    box-shadow: 0 0 15px rgba(255, 205, 113, 0.6), 0 0 30px rgba(255, 205, 113, 0.4); /* Glowing effect*/
+    transform: translateY(-5px) rotateY(9deg) rotateX(9deg); /* tilt and lift */
+}
+
+/* Maintain the 3D perspective */
+.bento-container {
+    perspective: 800px; /*for 3D effect */
+}
+
+.bento-container .row1, .bento-container .row2, .bento-container .row3, 
+.bento-container .row4, .bento-container .row5, 
+.bento-container .top, .bento-container .bottom {
+    transform-style: preserve-3d;
+}
+
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: add slight upward motion */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in to all divs within .bento-container */
+.bento-container > div {
+    border-radius: 2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease forwards; /* Trigger fade-in */
+    animation-delay: 0.3s; /* Delay for a smoother transition */
+    gap: 2em;
+}
+
+#link:hover{
+    color: #dcd74f;
+}
+
+@media (max-width: 768px) {
+    .music-icon {
+        margin-left: 1rem; /* Adjust for smaller screens */
+    }
+
+    .header {
+        padding: 1rem 3%; /* Reduced padding */
+    }
+
+    .navbar ul li {
+        margin-left: 1rem; /* Adjusted margin */
+    }
+
+    .bento-container {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem; /* Smaller logo */
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem; /* Smaller font size */
+        padding: 0.5rem; /* Adjust padding */
+    }
+}

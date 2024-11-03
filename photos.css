@@ -1,0 +1,392 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    font-family: "Comic Neue", cursive;
+    
+}
+
+#mylogo{
+  height: 70px;
+}
+
+body{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(neon-abstract-background-design.jpg);
+ 
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width for vertical scrollbar */
+  height: 12px; /* Adjust the height for horizontal scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color when hovered */
+}
+
+/* Scrollbar corner (if needed) */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1; /* Background of the corner */
+}
+
+
+#body1{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+.header{
+    background-color: rgba(0, 0, 0, 0.425);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 6%;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.804);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    z-index: 1000;
+}
+
+.logo{
+    color: #f0f0f0;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.navbar ul{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li{
+    margin-left: 2rem;
+}
+
+.navbar ul li a{
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 20px;
+    font-weight: 1000;
+    position: relative;
+    display: inline-block;
+    transition: color 0.4s ease; /* Smooth color transition */
+}
+
+.navbar ul li a:hover{
+    color: rgb(174, 38, 248);
+}
+
+/*for navbar underline animation*/
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    width: 0;
+    height: 2px; 
+    background-color: rgb(174, 38, 248);
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth animation */
+}
+
+.navbar ul li a:hover::after {
+    width: 100%; /* Full width underline on hover */
+    left: 0; /* Start from the left */
+}
+/*for navbar fill animation*/
+
+
+/**/
+::selection{
+    color: #fff;
+    background: #007bff;
+  }
+  body{
+    padding: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .wrapper{
+    max-width: 1100px;
+  }
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery .image{
+    padding: 7px;
+    width: calc(100% / 3);
+  }
+  .gallery .image span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  .gallery .image img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+  }
+  .gallery .image:hover img{
+    transform: scale(1.1);
+  }
+  
+  .preview-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: rgba(255, 255, 255, 0.1);
+    max-width: 500px;
+    width: 100%;
+    z-index: 2001; /* Ensure it appears in front of the header */
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+
+
+.gallery .image {
+  padding: 7px;
+  width: calc(100% / 3);
+  aspect-ratio: 1; /* Enforces a 1:1 aspect ratio */
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the box without stretching */
+  transition: all 0.3s ease;
+}
+
+.music-muted img {
+  filter: grayscale(100%);
+}
+.music-icon{
+  cursor: pointer;
+  height: 25px;
+  position: fixed;
+  color: white;
+  margin-left: 20px;
+  z-index: 1000;
+  left: 0;
+}
+
+.preview-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+  .preview-box .details{
+    display: flex;
+    align-items: center;
+    padding: 12px 15px 12px 10px;
+    justify-content: space-between;
+  }
+  .preview-box .details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .details .title p{
+    margin: 0 5px;
+    color: #fff;
+  }
+  .details .title p.current-img{
+    font-weight: 500;
+  }
+  .details .icon{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.gallery .image {
+    padding: 7px;
+    width: calc(100% / 3); /* Three images per row */
+    height: 200px; /* Set a fixed height */
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the box without stretching */
+    transition: all 0.3s ease;
+}
+
+.gallery .image:hover img {
+    transform: scale(1.1);
+}
+
+  .preview-box .image-box{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    position: relative;
+  }
+  .image-box .slide{
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+    width: 60px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+  }
+
+  .slide {
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+    width: 60px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slide:hover {
+    background-color: rgba(255, 205, 113, 0.8);
+    transform: translateY(-50%) scale(1.2); 
+}
+
+
+  .slide.prev{
+    left: 0px;
+  }
+  .slide.next{
+    right: 0px;
+  }
+  .image-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+  }
+  .shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.45);
+  }
+  
+  @media(max-width: 1000px){
+    .gallery .image{
+      width: calc(100% / 2);
+    }
+  }
+  @media(max-width: 600px){
+    .gallery .image{
+      width: 100%;
+      padding: 4px;
+    }
+  }
+  .gallery .image img {
+    width: 100%;
+    vertical-align: middle;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.9;
+}
+
+.gallery .image:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.gallery .image {
+  opacity: 0; /* Start images as invisible */
+  animation: fadeIn 1s ease forwards;
+}
+
+.gallery .image:nth-child(1) { animation-delay: 0.1s; }
+.gallery .image:nth-child(2) { animation-delay: 0.2s; }
+.gallery .image:nth-child(3) { animation-delay: 0.3s; }
+.gallery .image:nth-child(4) { animation-delay: 0.4s; }
+.gallery .image:nth-child(5) { animation-delay: 0.5s; }
+/* Add more nth-child selectors as needed for more images */
+
+
+/* Responsiveness */
+@media(max-width: 1000px) {
+  .gallery .image {
+    width: calc(100% / 2);
+  }
+  .logo { font-size: 1.6rem; }
+  .navbar ul li a { font-size: 1rem; padding: 10px; }
+}
+
+@media(max-width: 600px) {
+  .gallery .image {
+    width: 100%;
+    padding: 4px;
+  }
+}

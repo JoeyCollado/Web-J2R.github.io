@@ -1,0 +1,699 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    font-family: "Comic Neue", cursive;
+}
+
+#music-toggle{
+    z-index: 3000;
+}
+
+.music-muted img {
+    filter: grayscale(100%);
+  }
+.music-icon{
+    cursor: pointer;
+    height: 25px;
+    position: fixed;
+    color: white;
+    margin-left: 20px;
+    z-index: 5003;
+    left: 0;
+    margin-top: 12%;
+}
+
+#mylogo{
+    height: 70px;
+}
+
+#body1{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(cyberpunk-warrior-looking-city.jpg);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    max-height: 295vh;
+    height: 240vh;
+}
+
+/*numbers animation bg*/
+
+.numbers{
+    position: relative;
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.numbers span{
+    position: relative;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.05);
+    font-weight: 900;
+    line-height: 0.9em;
+    transition: 1s;
+    -webkit-user-select: none; /* Safari */
+    user-select: none;
+}
+
+.numbers span:hover{
+    transition: 0s;
+    color: #fff;
+    text-shadow: 0 0 10px blue,
+                 0 0 20px blue,
+                 0 0 40px blue,
+                 0 0 80px blue,
+                 0 0 160px blue;
+    z-index: 10;
+}
+
+
+.bento-container{
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    height: 200vh;
+    width: 80%;
+    gap: 2em;
+    margin-top: 10%;
+}
+
+.top{
+    gap: 1em;
+    flex: 1;
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.toprow1{
+    flex: 1;
+    border-radius: 1.5em;
+    background-color: #f0f0f04f;
+    display: flex;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+}
+
+.photocon1{
+   margin-left: 10%;
+   margin-top: 10%;
+   width: 80%;
+   height: 80%;
+   background-image: url(photo\ \(6\).jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.photocon2{
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 80%;
+    height: 80%;
+    background-image: url(photo\ \(9\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.photocon3{
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 80%;
+    height: 80%;
+    background-image: url(photo\ \(8\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.toprow2{
+    background-color: #f0f0f04f;
+    flex: 1;
+    border-radius: 1.5em;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+}
+
+.toprow3{
+    background-color: #f0f0f04f;
+    flex: 1;
+    border-radius: 1.5em;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+}
+
+.bottom{
+    
+    flex: 2;
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.bottom1{
+    border-radius: 1.5em;
+    flex: 1;
+    gap: 2em;
+    background-color: #f0f0f04f;
+    display: flex;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+}
+
+.content1{
+    background-color: #1c1c1cfe;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.colp{
+    color: #f0f0f0;
+    margin: 20px;
+    font-size: 1.3rem;
+    text-align: center; 
+}
+
+.bottom2{
+    border-radius: 1.5em;
+    background-color: #f0f0f04f;
+    flex: 1;
+    gap: 2em;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+
+}
+
+.content2{
+    background-color: #f0f0f04f;
+    height: 90%;
+    margin-top: 4%;
+}
+
+#background-video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1; /* Place the video behind all content */
+    opacity: 0.5;
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width for vertical scrollbar */
+    height: 12px; /* Adjust the height for horizontal scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+   
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovered */
+}
+
+/* Scrollbar corner (if needed) */
+::-webkit-scrollbar-corner {
+    background: #f1f1f1; /* Background of the corner */
+}
+
+
+
+.header{
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.425);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 6%;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.804);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.logo{
+    color: #f0f0f0;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.navbar ul{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li{
+    margin-left: 2rem;
+}
+
+.navbar ul li a{
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 20px;
+    font-weight: 1000;
+    position: relative;
+    display: inline-block;
+    transition: color 0.4s ease; /* Smooth color transition */
+}
+
+.navbar ul li a:hover{
+    color: rgb(47, 61, 252);
+}
+
+/*for navbar underline animation*/
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position the underline */
+    left: 50%; /* Start from the middle */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: rgb(47, 61, 252); /* Color of the underline */
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth animation */
+}
+
+.navbar ul li a:hover::after {
+    width: 100%; /* Full width underline on hover */
+    left: 0; /* Start from the left */
+}
+/*for navbar fill animation*/
+
+
+/*container*/
+
+/**/
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textReveal {
+    0% {
+        color: transparent;
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        color: #f0f0f0;
+        text-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
+    }
+}
+
+/* Apply fade-in-up animation to div boxes */
+.top, .toprow1, .toprow2, .toprow3, .bottom, .bottom1, .bottom2 {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1.2s ease forwards; /* Forward keeps final state */
+    animation-delay: 0.3s; /* Adds a slight delay to the animation */
+}
+
+/* Additional staggered delay for bottom divs for a cascading effect */
+.bottom1, .bottom2 {
+    animation-delay: 0.5s;
+}
+
+/* Paragraph animation inside the content divs */
+.colp {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+/* Add text reveal animation to welcome message */
+.contenth1 {
+    font-size: 5rem;
+    text-align: center;
+    z-index: 1000;
+    position: absolute;
+    margin-top: 12%;
+    color: #f0f0f0;
+    opacity: 0;
+    animation: textReveal 2s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/* Adjustments for other elements */
+.numbers span:hover {
+    transition: 0s;
+    color: #fff;
+    text-shadow: 0 0 10px blue,
+                 0 0 20px blue,
+                 0 0 40px blue,
+                 0 0 80px blue,
+                 0 0 160px blue;
+    z-index: 10;
+}
+
+/* Ensure responsive animations */
+@media (max-width: 768px) {
+    .contenth1 {
+        font-size: 3rem;
+    }
+}
+
+
+/* Hover scaling and shadow for main div boxes */
+.top:hover, .toprow1:hover, .toprow2:hover, .toprow3:hover, .bottom:hover, .bottom1:hover, .bottom2:hover {
+    transform: scale(1.03); /* Slight scale-up effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Glitch keyframes */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Hover effect on .numbers span */
+.numbers span:hover {
+    transition: 0.2s; /* Shorter transition for quick hover response */
+    color: #0800ff; /* Light gold color to match glow theme */
+    text-shadow: 0 0 10px #ffdf85, 0 0 20px #ffdf85, 0 0 40px #ffdf85;
+    z-index: 10;
+}
+
+/*media querries*/
+/* Large desktops and laptops */
+@media (max-width: 1200px) {
+    .contenth1 {
+        font-size: 4rem;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2rem;
+    }
+
+    .bento-container {
+        width: 90%;
+        gap: 1.5em;
+    }
+
+    .colp {
+        font-size: 1.2rem;
+    }
+}
+
+/* Tablets and smaller desktops */
+@media (max-width: 992px) {
+    .contenth1 {
+        font-size: 3.5rem;
+    }
+
+    .navbar ul li a {
+        font-size: 1.1rem;
+    }
+
+    .bento-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .top, .bottom {
+        gap: 1.5em;
+    }
+
+    .colp {
+        font-size: 1.1rem;
+    }
+
+    .numbers span {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile devices (landscape) */
+@media (max-width: 768px) {
+    .contenth1 {
+        font-size: 3rem;
+        margin-top: 15%;
+    }
+
+    .navbar ul li a {
+        font-size: 1rem;
+    }
+
+    .bento-container {
+        width: 95%;
+        gap: 1em;
+    }
+
+    .top, .bottom {
+        gap: 1em;
+    }
+
+    .numbers span {
+        font-size: 2rem;
+    }
+
+    .colp {
+        font-size: 1rem;
+        margin: 10px;
+    }
+
+    /* Reduce padding for header on smaller screens */
+    .header {
+        padding: 1rem 4%;
+    }
+}
+
+/* Mobile devices (portrait) */
+@media (max-width: 576px) {
+    .contenth1 {
+        font-size: 2.5rem;
+        margin-top: 20%;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9rem;
+        margin-left: 1rem;
+    }
+
+    .bento-container {
+        width: 100%;
+        gap: 0.5em;
+    }
+
+    .top, .bottom {
+        gap: 0.5em;
+    }
+
+    .numbers span {
+        font-size: 1.5rem;
+    }
+
+    .colp {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    /* Reduce the header size further */
+    .header {
+        padding: 0.8rem 3%;
+    }
+}
+
+/* Extra small devices (extra-narrow portrait screens) */
+@media (max-width: 400px) {
+    .contenth1 {
+        font-size: 2rem;
+        margin-top: 25%;
+    }
+
+    .navbar ul li a {
+        font-size: 0.8rem;
+    }
+
+    .numbers span {
+        font-size: 1.2rem;
+    }
+
+    .colp {
+        font-size: 0.8rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    font-family: "Comic Neue", cursive;
+}
+
+/* Music icon */
+#music-toggle {
+    z-index: 3000;
+}
+.music-muted img {
+    filter: grayscale(100%);
+}
+.music-icon {
+    cursor: pointer;
+    height: 25px;
+    position: fixed;
+    color: white;
+    margin: 12% 0 0 20px;
+    z-index: 5003;
+}
+
+/* Logo */
+#mylogo {
+    height: 70px;
+}
+
+/* Background */
+#body1 {
+    background: url(cyberpunk-warrior-looking-city.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: 295vh;
+    height: 240vh;
+    overflow: hidden;
+}
+
+/* Numbers animation */
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    cursor: default;
+}
+.numbers span {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.05);
+    font-weight: 900;
+    line-height: 0.9em;
+    transition: color 1s;
+    user-select: none;
+}
+.numbers span:hover {
+    color: #fff;
+    text-shadow: 0 0 10px blue, 0 0 40px blue, 0 0 80px blue;
+    z-index: 10;
+    transition: color 0.2s;
+}
+
+/* Bento container */
+.bento-container {
+    display: flex;
+    gap: 2em;
+    width: 80%;
+    margin-top: 10%;
+    height: 200vh;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+    .contenth1 { font-size: 3rem; }
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+    .contenth1 { font-size: 4rem; }
+    .navbar ul li a { font-size: 1.2rem; }
+    .bento-container { width: 90%; gap: 1.5em; }
+    .colp { font-size: 1.2rem; }
+}
+
+@media (max-width: 992px) {
+    .contenth1 { font-size: 3.5rem; }
+    .navbar ul li a { font-size: 1.1rem; }
+    .bento-container { flex-direction: column; width: 90%; }
+    .top, .bottom { gap: 1.5em; }
+    .colp { font-size: 1.1rem; }
+    .numbers span { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .contenth1 { font-size: 3rem; margin-top: 15%; }
+    .navbar ul li a { font-size: 1rem; }
+    .bento-container { width: 95%; gap: 1em; }
+    .top, .bottom { gap: 1em; }
+    .numbers span { font-size: 2rem; }
+    .colp { font-size: 1rem; margin: 10px; }
+    .header { padding: 1rem 4%; }
+}
+
+@media (max-width: 576px) {
+    .contenth1 { font-size: 2.5rem; margin-top: 20%; }
+    .navbar ul li a { font-size: 0.9rem; margin-left: 1rem; }
+    .bento-container { width: 100%; gap: 0.5em; }
+    .top, .bottom { gap: 0.5em; }
+    .numbers span { font-size: 1.5rem; }
+    .colp { font-size: 0.9rem; margin: 5px; }
+    .header { padding: 0.8rem 3%; }
+}
+
+@media (max-width: 400px) {
+    .contenth1 { font-size: 2rem; margin-top: 25%; }
+    .navbar ul li a { font-size: 0.8rem; }
+    .numbers span { font-size: 1.2rem; }
+    .colp { font-size: 0.8rem; }
+}
